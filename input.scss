@@ -1,0 +1,87 @@
+$creme: #FDF7ED;
+$rich-black: #0C1821;
+$wrought: #363B45;
+$charcoal: #364559;
+
+html{
+    overflow: hidden;
+}
+
+body {
+    background-color: $creme;
+    h3{
+        font-family: ibm-plex-mono, sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: $rich-black;
+        font-size: 1.5rem;
+    }
+}
+
+.field {
+    display: inline;
+    height: 30vh;
+    width: 20vw;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 40%;
+    margin-right: 40%;
+    height: 100vh;
+}
+  
+.container div {
+    text-align: center;
+}
+
+.btn {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    border-style: none;
+    -webkit-box-shadow: 5px 4px 0px $wrought;
+    -moz-box-shadow: 5px 4px 0px $wrought;
+    box-shadow: 5px 4px 0px $wrought;
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $creme;
+    font-size: 20px;
+    background: $rich-black;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+.btn:hover {
+    background: $charcoal;
+    text-decoration: none;
+    animation-name: shift;
+    animation-duration: .25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes shift {
+    from {
+        -webkit-box-shadow: 5px 4px 0px $wrought;
+        -moz-box-shadow: 5px 4px 0px $wrought;
+        box-shadow: 5px 4px 0px $wrought;
+    }
+    to {
+        -webkit-box-shadow: 7px 6px 0px $wrought;
+        -moz-box-shadow: 7px 6px 0px $wrought;
+        box-shadow: 7px 6px 0px $wrought;
+    }
+}
+
+.res {
+    border-radius: 0px;
+    border-width: 4px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-color: $rich-black;
+}

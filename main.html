@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexicon.</title>
+    <link rel="stylesheet" href="https://use.typekit.net/iqd0egy.css">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="icon" href="untitled.png">
+    <script>
+        const pre = ['a', 'ab', 'abs', 'ad', 'ac', 'af', 'ag', 'an', 'ar', 'at', 'as', 'ante', 'anti', 'auto']
+        const root = ['dict', 'duc', 'gress', 'ject', 'pel', 'pend', 'port', 'scrib', 'script', 'tract', 'vert']
+        const suff = ['ee', 'eer', 'er', 'ion', 'ism', 'ity', 'ment', 'ness', 'or', 'sion', 'ship', 'th', 'able', 'ible', 'al', 'ant', 'ary', 'ful', 'ic', 'ious', 'ous', 'ive', 'less', 'y']
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function genPre() {
+            const index = pre.getRandomInt(15);
+            console.log(index);
+            document.getElementById('prefix').innerHTML = pre[index];
+        }
+
+        function genRoot() {
+            const index = pre.getRandomInt(12);
+            document.getElementById('root').innerHTML = root[index];
+        }
+
+        function genSuf() {
+            const index = pre.getRandomInt(22);
+            document.getElementById('suffix').innerHTML = suff[index];
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="field">
+            <h3 id="prefix" class="res">un</h3>
+            <button class="btn" onclick="genPre">prefix</button>
+        </div>
+        <div class="field">
+            <h3 id="root" class="res">known</h3>
+            <button class="btn" onclick="genRoot">root</button>
+        </div>
+        <div class="field">
+            <h3 id="suffix" class="res">ish</h3>
+            <button class="btn" onclick="genSuf">suffix</button>
+        </div>
+    </div>
+</body>
+</html>
